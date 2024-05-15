@@ -11,8 +11,11 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
-  font-size: 16px;
-  line-height: 1.6;
+  background-color: #ebebeb;
 }
 
-/* Adicione outras redefinições necessárias abaixo */
+.container{
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
