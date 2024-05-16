@@ -1,3 +1,4 @@
+import CartButton from "../CartButton/CartButton";
 import SearchBar from "../SearchBar/SearchBar";
 import './Header.css'
 
@@ -6,7 +7,7 @@ const Header = () => {
     <header className="header">
       <div className="container">
         <SearchBar  />
-        <button>cart</button>
+        <CartButton/>
       </div>
     </header>
   );
