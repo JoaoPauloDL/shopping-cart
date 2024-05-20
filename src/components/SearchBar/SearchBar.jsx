@@ -1,6 +1,7 @@
 import { BsSearch } from "react-icons/bs";
 import './SearchBar.css'
 import { useState } from "react";
+import fetchProducts from "../../api/fetchProducts";
 
 const SearchBar = () => {
 
@@ -9,10 +10,19 @@ const SearchBar = () => {
   const handleInputChange = (event) =>{
     setSearchValue(event.target.value);
   }
+  
+  const handleSearch = async (event) => {
+    event.preventDefault();
+
+    const products = await fetchProducts(searchValue);
+    console.log(products);
+    searchValue('')
+    
+  }
 
   
   return (
-    <form className="search-bar">
+    <form className="search-bar" onSubmit={handleSearch}>
       <input
         type="search"
         value={searchValue}
